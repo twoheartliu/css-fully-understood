@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS完全に理解した</title>
+  </head>
+  <style>
+    .box {
+      height: 100px;
+      width: 300px;
+      border-radius: 8px;
+      border: 1px solid;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+    .box > div {
+      cursor: move;
+      position: absolute;
+      right: -20px;
+      animation: understood 2s infinite linear;
+    }
+
+    @keyframes understood {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div draggable="true">
+        CSS
+        <br />
+        完全に理解した
+      </div>
+    </div>
+  </body>
+</html>
